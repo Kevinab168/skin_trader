@@ -1,4 +1,5 @@
 db.sqlite3
 env/
-.pytest_cache/
-*/__pycache__/
+*__pycache__/
+secret_settings.py
+.vscode/

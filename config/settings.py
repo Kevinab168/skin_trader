@@ -37,9 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
-    # Third party apps 
+
+    # Third party apps
     'rest_framework',
+
+    # My apps
+    'skin_trader.users'
 ]
 
 MIDDLEWARE = [
@@ -102,6 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'users.User'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
