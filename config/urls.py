@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/users/', include('skin_trader.users.urls')),
     path('api/token-auth/', obtain_auth_token),
+    path('api/items/', include('skin_trader.items.urls')),
 ]

@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
 
     # My apps
-    'skin_trader.users'
+    'skin_trader.users',
+    'skin_trader.items',
 ]
 
 MIDDLEWARE = [
