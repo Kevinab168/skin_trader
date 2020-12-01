@@ -25,7 +25,9 @@ SECRET_KEY = 'sddeh2g-+o%3#!l-&y14-mn8cn4-%i33!v0@p=h5cg=7fwpprp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'gunicorn',
+]
 
 
 # Application definition
