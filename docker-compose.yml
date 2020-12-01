@@ -1,0 +1,16 @@
+services:
+  gunicorn:
+    image: docker.pkg.github.com/kevinab168/skin_trader/skin_trader_backend:main
+    ports: 
+      - "8000:8000" 
+    volumes: 
+      - static-content:/skin_trader/static
+
+  frontend:
+    image: docker.pkg.github.com/kevinab168/skin_trader_frontend/skin_trader_frontend:main
+    ports: 
+      - "8080:80"
+    volumes: 
+      - static-content:/usr/share/nginx/backend_static
+volumes: 
+  static-content:
