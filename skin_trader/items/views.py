@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 
-from .serializers import ItemSerializer
 from .models import Item
+from .serializers import ItemSerializer
 
 
 class ItemViewSet(viewsets.ModelViewSet):

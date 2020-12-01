@@ -10,4 +10,5 @@ class Item(models.Model):
     id_number = models.IntegerField()
 
     def __str__(self):
+        """Returns string representation."""
         return self.name

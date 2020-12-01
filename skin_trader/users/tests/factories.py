@@ -1,5 +1,6 @@
 import factory
 from factory.django import DjangoModelFactory
+
 from skin_trader.users import models
 
 
