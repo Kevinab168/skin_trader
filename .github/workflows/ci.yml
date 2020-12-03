@@ -42,6 +42,7 @@ jobs:
           tag_with_ref: true
   
   deploy:
+    needs: push_to_registry
     name: Deploy
     runs-on: ubuntu-latest
     steps:
