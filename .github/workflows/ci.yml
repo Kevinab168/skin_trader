@@ -40,3 +40,31 @@ jobs:
           registry: docker.pkg.github.com
           repository: kevinab168/skin_trader/skin_trader_backend
           tag_with_ref: true
+  
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out the repo
+      uses: actions/checkout@v2
+
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      env:
+        DOCKER_USER: ${{ github.actor }}
+        DOCKER_PASS: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        source: "docker-compose.yml"
+        target: "~"
+        script: |
+          cd ~
+          docker-compose down
+          docker image prune
+          docker login https://docker.pkg.github.com -u $DOCKER_USER -p $DOCKER_PASS
+          docker-compose pull docker pull docker.pkg.github.com/kevinab168/skin_trader/skin_trader_backend:main
+          docker-compose up -d --build
+
