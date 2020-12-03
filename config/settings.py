@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     'gunicorn',
     'localhost',
     '10.1.0.4',
+    '18.188.164.38',
 ]
 
 
