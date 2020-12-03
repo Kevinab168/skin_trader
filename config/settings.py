@@ -140,7 +140,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:8080',
     'http://localhost',
-    'http://18.188.164.38/',
+    'http://18.188.164.38',
 ]
 
 REST_FRAMEWORK = {
