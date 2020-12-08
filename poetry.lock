@@ -692,7 +692,7 @@ typing_extensions = ">=3.6,<4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "7dfa943b6b94f93a0067e4939f635867c2f0af108e426595f1be58b8ab4dc216"
+content-hash = "63b48916a674cdfb253610703f6dca35d1267c645665509012bf7e96b1cc7dea"
 
 [metadata.files]
 asgiref = [
