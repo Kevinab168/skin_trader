@@ -21,9 +21,9 @@ jobs:
         poetry install 
         
     - name: Lint with flake8
-      run: flake8
+      run: poetry run flake8
     - name: Test with pytest
-      run: pytest
+      run: poetry run pytest
   
   push_to_registry:
     needs: test
