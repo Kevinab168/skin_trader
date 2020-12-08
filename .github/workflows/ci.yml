@@ -18,12 +18,10 @@ jobs:
       run: |
         curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
         source $HOME/.poetry/env
+        poetry shell
         poetry install 
-        
-    - name: Lint with flake8
-      run: poetry run flake8
-    - name: Test with pytest
-      run: poetry run pytest
+        poetry run flake8 
+        poetry run pytest
   
   push_to_registry:
     needs: test
